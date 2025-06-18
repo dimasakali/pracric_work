@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест на IQ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="infoPage" class="page active">
+            <h1>Что такое IQ?</h1>
+            <div class="info-section">
+                <h2>Определение IQ</h2>
+                <p>IQ (коэффициент интеллекта) — это числовой показатель, который оценивает уровень интеллекта человека относительно среднего значения, равного 100. Он измеряет способности к логическому мышлению, решению задач и обучению.</p>
+            </div>
+            <div class="info-section">
+                <h2>Интересные факты об IQ</h2>
+                <ul>
+                    <li><strong>Средний IQ по странам:</strong> Япония — 106, Германия — 102, США — 98, Россия — 96 (по данным <a href="https://www.worlddata.info/iq-by-country.php" target="_blank">WorldData</a>).</li>
+                    <li><strong>Самый высокий IQ:</strong> Теренс Тао, австралийский математик, имеет IQ около 230, что делает его одним из самых умных людей в мире.</li>
+                    <li><strong>Средний IQ:</strong> Значение 100 считается средним по всему миру, примерно 68% людей имеют IQ от 85 до 115.</li>
+                </ul>
+            </div>
+            <div class="info-section">
+                <h2>Советы по улучшению IQ</h2>
+                <ul>
+                    <li><strong>Читайте книги:</strong> Чтение развивает словарный запас и аналитическое мышление.</li>
+                    <li><strong>Решайте головоломки:</strong> Кроссворды, судоку и логические задачи тренируют мозг.</li>
+                    <li><strong>Учите языки:</strong> Изучение нового языка улучшает когнитивные способности.</li>
+                    <li><strong>Спите достаточно:</strong> Сон важен для восстановления мозга и улучшения памяти.</li>
+                    <li><strong>Занимайтесь спортом:</strong> Физическая активность улучшает кровообращение и работу мозга.</li>
+                </ul>
+            </div>
+            <div class="info-section">
+                <h2>Полезные ресурсы</h2>
+                <p>Узнайте больше об IQ на следующих сайтах:</p>
+                <ul>
+                    <li><a href="https://www.mensa.org/" target="_blank">Mensa International</a> — организация для людей с высоким IQ.</li>
+                    <li><a href="https://www.psychologytoday.com/" target="_blank">Psychology Today</a> — статьи о психологии и интеллекте.</li>
+                    <li><a href="https://www.worlddata.info/iq-by-country.php" target="_blank">WorldData IQ Statistics</a> — статистика IQ по странам.</li>
+                </ul>
+            </div>
+            <button id="startTestBtn" class="btn-primary">Пройти тест на IQ</button>
+        </div>
+
+        <div id="startPage" class="page">
+            <h1>Тест на IQ</h1>
+            <p>Пройдите тест из 20 вопросов и узнайте свой уровень интеллекта! У вас есть 30 минут на выполнение.</p>
+            <form id="userForm">
+                <div class="input-group">
+                    <label for="firstName">Имя</label>
+                    <input type="text" id="firstName" placeholder="Введите ваше имя" required>
+                </div>
+                <div class="input-group">
+                    <label for="lastName">Фамилия</label>
+                    <input type="text" id="lastName" placeholder="Введите вашу фамилию" required>
+                </div>
+                <button type="submit" class="btn-primary">Начать тест</button>
+            </form>
+        </div>
+
+        <div id="quizPage" class="page">
+            <div class="timer">Осталось времени: <span id="timer">30:00</span></div>
+            <div class="progress-bar">
+                <div id="progress" style="width: 0%;"></div>
+            </div>
+            <h1>Вопрос <span id="questionNumber">1</span>/20</h1>
+            <img id="questionImage" src="" alt="" class="question-img">
+            <p id="questionText" class="question-text"></p>
+            <div id="answers" class="answers-grid"></div>
+            <button id="nextQuestion" class="btn-primary">Следующий вопрос</button>
+        </div>
+
+        <div id="resultPage" class="page">
+            <h1>Ваш результат</h1>
+            <p id="userNameResult" class="result-name"></p>
+            <div class="iq-circle">
+                <span id="iqResult">0</span>
+                <div class="iq-label">IQ</div>
+            </div>
+            <p id="iqComment" class="result-comment"></p>
+            <button id="restartQuiz" class="btn-primary">Пройти тест заново</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
